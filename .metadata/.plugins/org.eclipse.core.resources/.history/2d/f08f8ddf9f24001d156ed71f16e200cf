@@ -1,0 +1,5 @@
+package com.bolsaideas.springboot.form.app.models.domain;
+
+public class Role {
+
+}

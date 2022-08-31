@@ -1,0 +1,5 @@
+package com.bolsaideas.springboot.form.app.services;
+
+public interface PaisService {
+
+}

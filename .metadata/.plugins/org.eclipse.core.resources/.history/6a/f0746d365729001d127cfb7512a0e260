@@ -1,0 +1,8 @@
+package com.bolsaideas.springboot.horariointerceptor.app.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class AppController {
+
+}

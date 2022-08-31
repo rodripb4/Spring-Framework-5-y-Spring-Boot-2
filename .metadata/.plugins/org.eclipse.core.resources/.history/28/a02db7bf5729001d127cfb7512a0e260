@@ -1,0 +1,5 @@
+package com.bolsaideas.springboot.horariointerceptor.app.interceptors;
+
+public class HorarioInterceptor {
+
+}
