@@ -1,7 +1,0 @@
-package com.bolsaideas.springboot.form.app.validation;
-
-import javax.validation.ConstraintValidator;
-
-public class IdentificadorRegexValidador implements ConstraintValidator<A, T> {
-
-}

@@ -1,7 +1,0 @@
-package com.bolsaideas.springboot.form.app.editors;
-
-import java.beans.PropertyEditorSupport;
-
-public class NombreMayusculaEditor extends PropertyEditorSupport{
-
-}
