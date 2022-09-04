@@ -1,5 +1,0 @@
-package com.bolsaideas.springboot.form.app.interceptors;
-
-public class TiempoTranscurridoInterceptor {
-
-}
