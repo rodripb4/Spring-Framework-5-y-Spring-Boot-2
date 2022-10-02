@@ -1,5 +1,0 @@
-package com.bolsaideas.springboot.horariointerceptor.app.controllers;
-
-public class AppController {
-
-}
