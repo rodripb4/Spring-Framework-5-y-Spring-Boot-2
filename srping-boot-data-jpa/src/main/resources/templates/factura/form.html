@@ -16,7 +16,7 @@
 						th:text="'&laquo; volver'"></a>
 				</h4>
 
-				<form th:action="@{factura/form/}" th:object="${factura}"
+				<form th:action="@{/factura/form/}" th:object="${factura}"
 					method="post">
 
 					<div class="form-group row">
@@ -28,19 +28,20 @@
 						</div>
 					</div>
 
-					<div class="form-group row">
+					<div class="form-group row my-2">
 						<label class="col-sm-2 col-form-label" th:text="'Descripción'"></label>
 						<div class="col-sm-6">
-							<input type="text" th:field="*{descripcion}" class="form-control" />
+							<input type="text" th:field="*{descripcion}" class="form-control" th:errorclass="'form-control is-invalid'"/>
+							<div class="invalid-feedback" th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></div>
 						</div>
 					</div>
-					<div class="form-group row">
+					<div class="form-group row my-2">
 						<label class="col-sm-2 col-form-label" th:text="'Observación'"></label>
 						<div class="col-sm-6">
 							<textarea th:field="*{observacion}" class="form-control"></textarea>
 						</div>
 					</div>
-					<div class="form-group row">
+					<div class="form-group row my-2">
 						<label class="col-sm-2 col-form-label" th:text="'Buscar producto'"></label>
 						<div class="col-sm-6">
 							<input type="text" name="buscar_producto" id="buscar_producto"
