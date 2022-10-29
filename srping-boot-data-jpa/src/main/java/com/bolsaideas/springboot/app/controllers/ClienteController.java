@@ -54,7 +54,7 @@ public class ClienteController {
 
 	@Autowired
 	private IUploadFileService uploadFileService;
-	
+
 	@Secured({"ROLE_USER"})
 	@GetMapping(value = "/uploads/{filename:.+}")
 	public ResponseEntity<Resource> verFoto(@PathVariable String filename) {
@@ -77,7 +77,6 @@ public class ClienteController {
 	@GetMapping(value = "/ver/{id}")
 	public String ver(@PathVariable(value = "id") Long id, Map<String, Object> model, RedirectAttributes flash) {
 
-						//clienteService.findOne(id);
 		Cliente cliente = clienteService.fetchByIdWithFacturas(id);
 		if (cliente == null) {
 			flash.addFlashAttribute("error", "El cliente no existe en la base de datos");
@@ -93,8 +92,7 @@ public class ClienteController {
 	public String listar(@RequestParam(name = "page", defaultValue = "0") int page, Model model,
 			Authentication authentication,
 			HttpServletRequest request) {
-		
-		
+
 		if(authentication != null) {
 			logger.info("Hola usuario autenticado, tu username es: ".concat(authentication.getName()));
 		}
@@ -102,7 +100,7 @@ public class ClienteController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
 		if(auth != null) {
-			logger.info("Utilizando forma estÃ¡tica SecurityContextHolder.getContext().getAuthentication(): Usuario autenticado: ".concat(auth.getName()));
+			logger.info("Utilizando forma estática SecurityContextHolder.getContext().getAuthentication(): Usuario autenticado: ".concat(auth.getName()));
 		}
 		
 		if(hasRole("ROLE_ADMIN")) {
@@ -124,7 +122,7 @@ public class ClienteController {
 		} else {
 			logger.info("Forma usando HttpServletRequest: Hola ".concat(auth.getName()).concat(" NO tienes acceso!"));
 		}	
-
+		
 		Pageable pageRequest = PageRequest.of(page, 4);
 
 		Page<Cliente> clientes = clienteService.findAll(pageRequest);
@@ -142,7 +140,7 @@ public class ClienteController {
 
 		Cliente cliente = new Cliente();
 		model.put("cliente", cliente);
-		model.put("titulo", "Formulario de Cliente");
+		model.put("titulo", "Crear Cliente");
 		return "form";
 	}
 
@@ -196,6 +194,7 @@ public class ClienteController {
 			flash.addFlashAttribute("info", "Has subido correctamente '" + uniqueFilename + "'");
 
 			cliente.setFoto(uniqueFilename);
+
 		}
 
 		String mensajeFlash = (cliente.getId() != null) ? "Cliente editado con éxito!" : "Cliente creado con éxito!";
