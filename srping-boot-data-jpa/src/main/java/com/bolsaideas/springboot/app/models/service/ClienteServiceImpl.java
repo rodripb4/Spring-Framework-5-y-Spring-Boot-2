@@ -62,6 +62,7 @@ public class ClienteServiceImpl implements IClienteService{
 	}
 
 	@Override
+	@Transactional(readOnly = true)
 	public List<Producto> findByNombre(String term) {
 		// TODO Auto-generated method stub
 		return productoDao.findByNombreLikeIgnoreCase("%"+term+"%");
@@ -92,13 +93,13 @@ public class ClienteServiceImpl implements IClienteService{
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly=true)
 	public Factura fetchFacturaByIdWithClienteWithItemFacturaWithProducto(Long id) {
 		return facturaDao.fetchByIdWithClienteWithItemFacturaWithProducto(id);
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly = true)
 	public Cliente fetchByIdWithFacturas(Long id) {
 		return clienteDao.fetchByIdWithFacturas(id);
 	}
