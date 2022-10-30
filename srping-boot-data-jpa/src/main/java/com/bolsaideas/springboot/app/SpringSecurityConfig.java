@@ -1,7 +1,5 @@
 package com.bolsaideas.springboot.app;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.bolsaideas.springboot.app.auth.handler.LoginSuccessHandler;
+import com.bolsaideas.springboot.app.models.service.JpaUserDetailService;
 
 @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 @Configuration
@@ -28,7 +27,7 @@ public class SpringSecurityConfig {
 	private AuthenticationConfiguration authenticationConfiguration;
 
 	@Autowired
-	private DataSource dataSource;
+	private JpaUserDetailService userDetailsService;
 
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
@@ -36,12 +35,8 @@ public class SpringSecurityConfig {
 	@Bean
 	public UserDetailsService userDetailsService(AuthenticationManagerBuilder build) throws Exception {
 
-		build.jdbcAuthentication()
-				.dataSource(dataSource)
-				.passwordEncoder(passwordEncoder)
-				.usersByUsernameQuery("select username, password, enabled from users where username=?")
-				.authoritiesByUsernameQuery(
-						"select u.username, a.authority from authorities a inner join users u on (a.user_id=u.id) where u.username=?");
+		build.userDetailsService(userDetailsService)
+		.passwordEncoder(passwordEncoder);
 
 		return build.getDefaultUserDetailsService();
 	}
