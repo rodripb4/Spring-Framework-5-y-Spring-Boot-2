@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.security.provisioning.InMemoryUserDetailsManager"/>
-    <fullyQualifiedTypeName name="org.springframework.security.web.SecurityFilterChain"/>
-    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.builders.HttpSecurity"/>
-    <fullyQualifiedTypeName name="org.springframework.security.authentication.AuthenticationManager"/>
-    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration"/>
-    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity"/>
-    <fullyQualifiedTypeName name="java.security.Principal"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.support.RedirectAttributes"/>
-    <fullyQualifiedTypeName name="org.springframework.security.crypto.password.PasswordEncoder"/>
-    <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User.UserBuilder"/>
-    <fullyQualifiedTypeName name="com.bolsaideas.springboot.app.auth.handler.LoginSuccessHandler"/>
-    <fullyQualifiedTypeName name="org.springframework.security.access.prepost.PreAuthorize"/>
-    <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContext"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ViewControllerRegistry"/>
-    <fullyQualifiedTypeName name="org.springframework.security.access.annotation.Secured"/>
-    <fullyQualifiedTypeName name="org.springframework.security.web.util.matcher.AntPathRequestMatcher"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
@@ -35,7 +15,6 @@
     <fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetailsService"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.bolsaideas.springboot.app.models.dao.IUsuarioDAO"/>
     <fullyQualifiedTypeName name="com.bolsaideas.springboot.app.models.entity.Usuario"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -50,7 +29,6 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UsernameNotFoundException"/>
     <fullyQualifiedTypeName name="com.bolsaideas.springboot.app.models.service.JpaUserDetailService"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.LocaleResolver"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
@@ -58,6 +36,28 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.view.document.AbstractPdfView"/>
+    <fullyQualifiedTypeName name="com.bolsaideas.springboot.app.models.entity.Factura"/>
+    <fullyQualifiedTypeName name="com.lowagie.text.pdf.PdfPTable"/>
+    <fullyQualifiedTypeName name="com.lowagie.text.Phrase"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="com.lowagie.text.pdf.PdfPCell"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.context.MessageSource"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.LocaleResolver"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.MessageSourceAccessor"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.view.document.AbstractXlsView"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Sheet"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Row"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
+    <fullyQualifiedTypeName name="com.bolsaideas.springboot.app.models.entity.ItemFactura"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.CellStyle"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.BorderStyle"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.IndexedColors"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.FillPatternType"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.view.document.AbstractXlsxView"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFColor"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Color"/>
 </qualifiedTypeNameHistroy>
